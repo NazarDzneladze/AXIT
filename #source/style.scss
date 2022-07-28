@@ -161,10 +161,21 @@ img{
 	.header__link{
 		margin-right: 60px;
 		@extend %nav-link-style;
+		transition: 0.6s;
+		&:hover{
+			opacity: 0.7;
+		}
+		&:active{
+			opacity: 0.5;
+		}
 	}
 }
 
 // header style end
+
+
+
+// intro style start
 
 .intro{
 	background-image: url(../img/background-intro.jpg);
@@ -218,6 +229,18 @@ img{
 	border: 2px solid #FFFFFF;
 	width: 270px;
 	height: 58px;
+	transition: 0.7s;
+}
+
+.intro__button:hover{
+	border-color: #EC7979;
+	color: #EC7979;
+}
+
+.intro__button:active{
+	background-color:#AB4949;;
+	border: 2px solid #AB4949;
+	color: white;
 }
 
 .intro__form{
@@ -270,11 +293,19 @@ img{
 	background-color: #EC7979;
 	border-radius: 0px 0px 10px 10px;
 	height: 60px;
-	@include open_sans-font(600,15px,20px,#FFFFFF)
+	@include open_sans-font(600,15px,20px,#FFFFFF);
+	transition: 0.7s;
+}
+.intro__form-bottun:hover{
+	background-color: #AB4949;
+}
+
+.intro__form-bottun:active{
+	background-color: #EC7979;
 }
 
 
-@media(max-width:1054px){
+@media(max-width:1024px){
 
 	.intro__content{
 		padding-top: 136px;
@@ -400,6 +431,228 @@ img{
 	}
 
 }
+
+// intro style end
+
+
+
+// social-media style start
+
+.social-media{
+	background-color: #F8EFEF;
+	padding-bottom: 18px;	
+}
+
+.social-media__content{
+	display: flex;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+}
+
+.social-media__text-block{
+	width: 470 / 1170 * 100%;
+}
+.social-media__social{
+	margin-top: 2px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 18px;
+}
+.social__style{
+	@include open_sans-font(700,24px,33px,#333333)
+}
+
+.socila-icon{
+	margin-right: 30px;
+	display: flex;
+	align-items: center;
+	&:last-child{
+		margin-right: 0;
+	}
+
+	a:hover{
+		opacity: 0.6;
+		transition: 0.5s;
+	}
+}
+
+.social-media__icons{
+	margin-top: 35px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.social__text-style{
+	@include raleway-font(400,18px,21px,#86878B )
+}
+
+
+
+@media(max-width:1024px){
+
+	.social-media{
+		padding-bottom: 13px;	
+	}
+
+	.facebook-ico,
+	.twitter-ico,
+	.linkedin-ico,
+	.pinterest-ico,
+	.instagram-ico,
+	.github-ico,
+	.rss_icon-ico{
+		width: 60px;
+		height: 60px;
+	}
+	.socila-icon{
+		margin-right: 20px;
+	}
+
+	.social__style{
+		@include open_sans-font(700,18px,25px,#333333)
+	}
+
+	.social__text-style{
+		@include raleway-font(400,14px,16px,#86878B )
+	}
+
+	.social-media__social{
+		margin-bottom: 13px;
+		height: 45px;
+	}
+}
+
+@media (max-width:320px){
+	.social-media__content{
+		flex-direction: column;
+	}
+	.facebook-ico,
+	.twitter-ico,
+	.linkedin-ico,
+	.pinterest-ico,
+	.instagram-ico,
+	.github-ico,
+	.rss_icon-ico{
+		width: 26px;
+		height: 26px;
+	}
+	.socila-icon{
+		margin-right: 17px;
+	}
+
+	.social-media{
+		padding-bottom: 44px;
+		padding-top: 31px;	
+	}
+
+
+	.social-media__text{
+		width: 271px;
+		margin-bottom: 32px;
+		text-align: center;
+		
+	}
+	.social-media__social{
+		width: 287px;
+		margin-top: 0;
+		justify-content: center;
+	}
+
+	.social__style{
+		text-align: center;
+	}
+}
+
+// socia-media style end
+
+
+
+// tabs_plus_awesome style start
+
+.tabs_plus_awesome{
+	padding-top: 99px;
+}
+
+.tabs__items{
+	display: flex;
+}
+
+.tabs__item{
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.tabs__body{
+	padding-left: 100px;
+	border-left:1px solid #C6CBCD;
+	border-bottom:1px solid #C6CBCD;
+	border-right:1px solid #C6CBCD;
+	margin-bottom: 50px;
+}
+
+
+.tabs__info{
+	margin-right: 30px;
+}
+
+.tabs__block{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.tabs__title,.tabs__text{
+	width: 570px;
+}
+
+.tabs__title{
+	margin-bottom: 27px;
+	height: 124px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.tabs__text{
+	margin-bottom: 27px;
+}
+
+.tabs-title__style{
+	@include open_sans-font(700,30px,41px,#000000)
+}
+
+.tabs-text__style{
+	@include raleway-font(400,18px,21px,#000000 )
+}
+
+.tabs__item-style{
+	@include open_sans-font(400,14px,19px,#333333);
+	text-transform: $text-trm-upp;
+	text-decoration: none;
+
+}
+
+.tabs__item{
+	width: 184px;
+	text-align: center;
+}
+
+.why-awesome{
+	margin-bottom: 40px;
+}
+
+.lorem-awesome{
+	margin-bottom: 71px;
+}
+
+// tabs_plus_awesome style end
+
+
+
+
 
 
 
